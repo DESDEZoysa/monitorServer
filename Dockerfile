@@ -1,8 +1,9 @@
-FROM openjdk:17-alpine
-WORKDIR /app
-ARG JAR_FILE=target/monitorServer-0.0.1-SNAPSHOT.jar
-COPY --from=builder $JAR_FILE /app/
+FROM ubuntu:latest AS build
+RUN apt-get update
+RUN apt-get install openjdk-17-jdk -y
 COPY . .
-RUN mvn clean package
+RUN mvn clean install
+FROM openjdk:17-jdk-slim
 EXPOSE 8091
-ENTRYPOINT ["java", "-jar", "/app/$JAR_FILE"]
+COPY --from=build /target/monitorServer-0.0.1-SNAPSHOT.jar app.jar
+ENTRYPOINT ["java", "-jar", "app.jar"]
