@@ -1,0 +1,12 @@
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/controller/ServerMessageController.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/MonitorServerApplication.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/model/entity/ServerMessageEntity.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/model/dto/CompletionChoice.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/model/dto/CompletionResponseDto.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/repository/ServerMessageRepository.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/model/mapper/ServerMessageMapper.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/model/dto/CompletionRequestDto.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/service/impl/ServerMessageServiceImpl.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/model/enums/TabNameEnum.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/model/dto/ServerMessageDto.java
+/workspaces/monitorServer/src/main/java/com/msc/monitorServer/service/ServerMessageService.java
