@@ -62,15 +62,17 @@
 
 	<build>
 		<plugins>			
-<!-- 			<plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<source>17</source>
+    					<target>17</target>
 					<mainClass>com.msc.monitorServer.MonitorServerApplication</mainClass>
 					<layout>JAR</layout>
 				</configuration>
-			</plugin> -->
-			<plugin>
+			</plugin>
+<!-- 			<plugin>
   				<groupId>org.apache.maven.plugins</groupId>
   				<artifactId>maven-compiler-plugin</artifactId>
   				<version>3.12.1</version> 
@@ -80,7 +82,7 @@
 					<mainClass>com.msc.monitorServer.MonitorServerApplication</mainClass>
 					<layout>JAR</layout>
   				</configuration>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 
