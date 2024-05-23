@@ -52,7 +52,7 @@ public class ServerMessageServiceImpl implements ServerMessageService {
                 .id(0)
                 .prompt(serverMessageDto.getPrompt())
                 .initialChoicesText(serverMessageDto.getInitialChoicesText())
-                .updatedChoicesText(null)
+                .updatedChoicesText("2")
                 .build()
         );
     }

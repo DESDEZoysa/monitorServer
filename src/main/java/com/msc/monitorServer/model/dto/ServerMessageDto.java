@@ -23,9 +23,9 @@ public class ServerMessageDto {
     @Pattern(regexp = "^[A-Za-z0-9+_.-]+@(.+)$", message = "prompt should be valid")
     private String prompt;
     @Schema(description = "initialChoicesText value which can be either '1' or '0'", example = "1", type = "string")
-    @Pattern(regexp = "^(1|0)$", message = "Status can only be '1' or '0'")
+    @Pattern(regexp = "^(1|0|2)$", message = "Status can only be '1' or '0'")
     private String initialChoicesText;
     @Schema(description = "updatedChoicesText value which can be either '1' or '0'", example = "1", type = "string")
-    @Pattern(regexp = "^(1|0)$", message = "Status can only be '1' or '0'")
+    @Pattern(regexp = "^(1|0|2)$", message = "Status can only be '1' or '0'")
     private String updatedChoicesText;
 }
