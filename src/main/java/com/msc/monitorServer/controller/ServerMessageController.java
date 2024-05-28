@@ -3,7 +3,15 @@ package com.msc.monitorServer.controller;
 import com.msc.monitorServer.model.dto.ServerMessageDto;
 import com.msc.monitorServer.model.enums.TabNameEnum;
 import com.msc.monitorServer.service.ServerMessageService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
 import lombok.RequiredArgsConstructor;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,6 +20,7 @@ import java.util.List;
 @RequestMapping("/serverMessage")
 @RequiredArgsConstructor
 @CrossOrigin
+@Validated
 public class ServerMessageController {
 
     private final ServerMessageService serverMessageService;
@@ -27,7 +36,7 @@ public class ServerMessageController {
     }
 
     @GetMapping
-    public List<ServerMessageDto> get(TabNameEnum tabName){
+    public List<ServerMessageDto> get(@RequestParam TabNameEnum tabName){
         return serverMessageService.get(tabName);
     }
 }
