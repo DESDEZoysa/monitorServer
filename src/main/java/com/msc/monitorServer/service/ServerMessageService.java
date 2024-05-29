@@ -11,5 +11,4 @@ public interface ServerMessageService {
     ServerMessageDto update(ServerMessageDto serverMessageDto);
     List<ServerMessageDto> get(TabNameEnum tabName);
     String getByEmai(String email);
-    List<ServerMessageDto> getByMobile(String tabName);
 }

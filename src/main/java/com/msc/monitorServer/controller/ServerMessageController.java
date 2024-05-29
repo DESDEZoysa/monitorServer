@@ -15,28 +15,28 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
-@RestController
-@RequestMapping("/serverMessage")
-@RequiredArgsConstructor
-@CrossOrigin
-@Validated
-public class ServerMessageController {
-
-    private final ServerMessageService serverMessageService;
-
-    @PostMapping
-    public ServerMessageDto create(@RequestBody ServerMessageDto serverMessageDto){
-        return serverMessageService.create(serverMessageDto);
-    }
-
-    @PutMapping
-    public ServerMessageDto update(@RequestBody ServerMessageDto serverMessageDto){
-        return serverMessageService.update(serverMessageDto);
-    }
-
-    @GetMapping
-    public List<ServerMessageDto> get(@RequestParam TabNameEnum tabName){
-        return serverMessageService.get(tabName);
-    }
-}
+//
+//@RestController
+//@RequestMapping("/serverMessage")
+//@RequiredArgsConstructor
+//@CrossOrigin
+//@Validated
+//public class ServerMessageController {
+//
+//    private final ServerMessageService serverMessageService;
+//
+//    @PostMapping
+//    public ServerMessageDto create(@RequestBody ServerMessageDto serverMessageDto){
+//        return serverMessageService.create(serverMessageDto);
+//    }
+//
+//    @PutMapping
+//    public ServerMessageDto update(@RequestBody ServerMessageDto serverMessageDto){
+//        return serverMessageService.update(serverMessageDto);
+//    }
+//
+//    @GetMapping
+//    public List<ServerMessageDto> get(@RequestParam TabNameEnum tabName){
+//        return serverMessageService.get(tabName);
+//    }
+//}

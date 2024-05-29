@@ -50,10 +50,6 @@ public class ServerMessageServiceImpl implements ServerMessageService {
         return email;
     }
 
-    @Override
-    public List<ServerMessageDto> getByMobile(String tabName) {
-        return null;
-    }
 
     private ServerMessageEntity getServerMessageEntity(ServerMessageDto serverMessageDto){
         return serverMessageMapper.dtoToEntity(
