@@ -2,6 +2,8 @@ package com.msc.monitorServer.controller;
 
 import com.msc.monitorServer.model.dto.ServerMessageDto;
 import com.msc.monitorServer.service.ServerMessageService;
+import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -35,8 +37,9 @@ public class TestController {
 //        return mobile;
 //    }
 
-    @GetMapping("/getDetail")
-    public HashMap getDetail(@RequestParam String text1, @RequestParam String text2){
+    @PatchMapping("/getDetail")
+    public HashMap getDetail(@Parameter(schema = @Schema(type = "string", format = "email"))@RequestParam @Email String text1,
+                             @RequestParam String text2){
         HashMap map = new HashMap();
         map.put("text1",text1);
         map.put("text2",text2);
